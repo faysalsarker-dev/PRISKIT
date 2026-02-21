@@ -5,8 +5,8 @@
   "main": "dist/server.js",
   "scripts": {
     "start": "node dist/server.js",
-    "dev": "tsx watch src/server.ts",
-    "build": "tsup",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
     "postinstall": "prisma generate",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
@@ -28,7 +28,6 @@
     "@types/pg": "^8.16.0",
     "prisma": "^7.4.0",
     "ts-node-dev": "^2.0.0",
-    "tsup": "^8.5.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
