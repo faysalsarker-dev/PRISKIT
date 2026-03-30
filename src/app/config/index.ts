@@ -76,12 +76,12 @@ export const config = buildConfig({
   db: {
     url:            str("DATABASE_URL"),
   },
-//   jwt: {
-//     secret:           str("JWT_SECRET"),
-//     expiresIn:        str("JWT_EXPIRES_IN",         "7d"),
-//     refreshSecret:    str("JWT_REFRESH_SECRET"),
-//     refreshExpiresIn: str("JWT_REFRESH_EXPIRES_IN", "30d"),
-//   },
+  jwt: {
+    secret:           str("JWT_SECRET"),
+    expiresIn:        str("JWT_EXPIRES_IN",         "7d"),
+    refreshSecret:    str("JWT_REFRESH_SECRET"),
+    refreshExpiresIn: str("JWT_REFRESH_EXPIRES_IN", "30d"),
+  },
 //   bcrypt: {
 //     saltRounds: num("BCRYPT_SALT_ROUNDS", 10),
 //   },
