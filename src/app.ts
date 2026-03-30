@@ -31,8 +31,7 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
-
-app.get("/", (req: Request, res: Response) => {
+app.get("/", (_req: Request, res: Response) => {
   res.status(200).json({
     success: true,
     message: "Server is running",
@@ -43,7 +42,7 @@ app.get("/", (req: Request, res: Response) => {
 app.use("/api/v1", router);
 
 
-app.use((req: Request, res: Response, next: NextFunction) => {
+app.use((req: Request, _res: Response, next: NextFunction) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
 
